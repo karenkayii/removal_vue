@@ -1,22 +1,30 @@
 <template>
-    <h1></h1>
-    <h2>{{ capitalize ("hello from greeting component")}}</h2>
-    <h2>Hello {{ name }}</h2>
+  <section>
+    <h2>Greeting Component</h2>
+
+    <p>{{ capitalizedMessage }}</p>
+
+    <p>Hello, {{ username }}</p>
+  </section>
 </template>
 
 <script>
-import { capitalize } from '../util';
-  export default{
-    props:{
-        name: {
-            type:String,
-            required : true
-        }
+import { capitalize } from "../utils.js";
+
+export default {
+  name: "Greeting",
+  props: {
+    username: { type: String, required: true },
+  },
+  data() {
+    return {
+      message: "hello from greeting component",
+    };
+  },
+  computed: {
+    capitalizedMessage() {
+      return capitalize(this.message);
     },
-    methods:{
-        capitalize
-    }
-}
+  },
+};
 </script>
-
-
