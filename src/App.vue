@@ -3,17 +3,29 @@ to check node type : node -v
 to check node type : npm -v
 -->
 <template>
-    <div id="app">
-        <Greeting name="Elyn"/>
-        <Student />
-    </div>
+  <main>
+    <h1>Prelim Vue Exam</h1>
+
+    <Greeting :username="user" />
+
+    <hr style="margin: 24px 0;" />
+
+    <Students />
+  </main>
 </template>
 
 <script>
-import Greeting from "./components/Greeting.vue"
-import Students from "./components/Students.vue"
+import Greeting from "./components/Greeting.vue";
+import Students from "./components/Students.vue";
+
 export default {
-    components: {Greeting, Students}
-}
+  name: "App",
+  components: { Greeting, Students },
+  data() {
+    return {
+      user: "MJ Alarde",
+    };
+  },
+};
 </script>
 
