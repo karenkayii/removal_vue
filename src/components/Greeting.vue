@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { capitalize } from "../utils.js";
+import { capitalize } from "../util.js";
 
 export default {
   name: "Greeting",
