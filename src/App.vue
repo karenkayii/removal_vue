@@ -23,7 +23,7 @@ export default {
   components: { Greeting, Students },
   data() {
     return {
-      user: "MJ Alarde",
+      user: "Karen Kaye Bancale",
     };
   },
 };
